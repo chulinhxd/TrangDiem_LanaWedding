@@ -86,6 +86,7 @@
     .footer__content
     .footer__map {
       padding: 2%;
+      height: $form-footer-min-hight;
     }
     
   .footer .footer__content .footer__form .form__item input {
@@ -112,4 +113,10 @@
   .footer .footer__content .footer__form .form__item select {
     font-size: calc($text-medium * 0.7);
   }
+  .footer
+    .footer__content
+    .footer__map {
+      padding: 2%;
+      height: $form-footer-min-hight;
+    }
 }
