@@ -1,0 +1,392 @@
+@import "./_global.scss";
+@import "./_dieukhien.scss";
+@import "./_mixin.scss";
+@import "./_keyframe.scss";
+
+// header
+.header {
+  background-color: $white;
+  padding: $header-padding;
+  border-bottom: $header-border-bottom solid $white;
+  animation: text-pop-up-top 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* header logo */
+    .header__logo a {
+      color: $black;
+      font-size: $text-large;
+      align-items: center;
+    }
+    /* header navbar */
+    .header__navbar {
+      color: $black;
+      display: flex;
+      justify-content: center;
+      gap: $header-menu-gap;
+      /* navbar item */
+      .header__navbar__item {
+        a {
+          color: $black;
+          text-transform: uppercase;
+          &:hover {
+            color: rgb(22, 117, 240);
+          }
+        }
+      }
+    }
+  }
+}
+// banner
+.banner {
+  background-image: url(../img/Banner_Lana_01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: $banner-height;
+  position: relative;
+  margin: auto;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  .banner__content {
+    text-align: center;
+    color: $white;
+    width: 50%;
+    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    p {
+      font-size: $text-medium;
+      letter-spacing: $banner-content-letter-spacing-small;
+      animation: flip-in-ver-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      animation-iteration-count: infinite;
+      animation-duration: 2s;
+      animation-delay: 1s;
+    }
+    h1 {
+      font-size: $text-large;
+      line-height: $banner-content-line-height;
+      letter-spacing: $banner-content-letter-spacing-large;
+    }
+    button {
+      padding: $button-padding-top-down $button-padding-left-right;
+      background-color: #e62b4a;
+      border: $header-border-bottom solid #e62b4a;
+      margin-top: $button-margin-top;
+      color: $white;
+    }
+    i {
+      display: block;
+      font-size: $text-large;
+      margin-top: $banner-icon-margin-top;
+      animation: icon-pop-up-top;
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+      animation-delay: 1s;
+    }
+  }
+  &::before {
+    content: "";
+    background-color: #f7f7f779;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+// Váy cưới
+.vaycuoi {
+  .vaycuoi__content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: $section-img-gap;
+    // grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    img {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+    .vaycuoi__content__item {
+      position: relative;
+      overflow: hidden;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+      transition: all 0.5s;
+      border-radius: $border-radius-VayCuoi;
+      span {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: $white;
+        padding: 0.2rem 0.4rem;
+        cursor: pointer;
+        transition: all 0.5s;
+        transform: translateY(-4rem);
+        i {
+          transition: all 0.5s;
+        }
+      }
+      span:hover {
+        background-color: $black;
+        i {
+          color: $white;
+        }
+      }
+      .vaycuoi__content__item__text {
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        transform: translateY(4rem);
+        transition: all 0.5s;
+        p {
+          color: #dfdfdfbd;
+        }
+        h5 {
+          color: $white;
+        }
+      }
+      .vaycuoi__content__item__overlay {
+        position: absolute;
+        background-color: #e62b4a8e;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+      }
+    }
+    .vaycuoi__content__item:hover {
+      box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.726);
+      .vaycuoi__content__item__overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+      span {
+        transform: translateY(0);
+      }
+      .vaycuoi__content__item__text {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+// Trang điểm
+.makeup {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(236, 236, 236, 1) 5%,
+    rgba(236, 236, 236, 1) 100%
+  );
+  height: 100%;
+  .makeup__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    // grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: auto auto auto auto;
+    // grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));
+    .makeup__content__item {
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        filter: contrast(30%);
+        transition: all 0.5s;
+
+        &:hover {
+          filter: contrast(100%);
+        }
+      }
+    }
+    .makeup__content__item:first-child {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+    .makeup__content__item:nth-child(2) {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+    }
+    .makeup__content__item:nth-child(3) {
+      grid-column: 4 / span 1;
+      grid-row: 1 / span 1;
+    }
+    .makeup__content__item:nth-child(4) {
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 1;
+    }
+    .makeup__content__item:nth-child(5) {
+      grid-column: 4 / span 1;
+      grid-row: 2 / span 1;
+    }
+    .makeup__content__item:nth-child(6) {
+      grid-column: 1 / span 1;
+      grid-row: 3 / span 1;
+    }
+    .makeup__content__item:nth-child(7) {
+      grid-column: 2 / span 1;
+      grid-row: 3 / span 1;
+    }
+    .makeup__content__item:nth-child(8) {
+      grid-column: 1 / span 1;
+      grid-row: 4 / span 1;
+    }
+    .makeup__content__item:nth-child(9) {
+      grid-column: 2 / span 1;
+      grid-row: 4 / span 1;
+    }
+    .makeup__content__item:last-child {
+      grid-column: 3 / span 2;
+      grid-row: 3 / span 2;
+    }
+  }
+}
+// footer
+.footer {
+  background: rgb(236, 236, 236);
+  background: linear-gradient(
+    180deg,
+    rgba(236, 236, 236, 1) 0%,
+    rgba(255, 196, 0, 0.05) 5%,
+    rgba(255, 196, 0, 0.05) 100%
+  );
+  .footer__content {
+    // display: flex;
+    // gap: $section-img-gap;
+    // margin: auto;
+    display: grid;
+    gap: $section-img-gap;
+    grid-template-columns: auto auto;
+    margin: auto;
+    .footer__map {
+      width: 100%;
+      height: $form-footer-max-hight;
+      background-color: $footer-form-MauNen;
+      border-radius: $border-radius-MapGoogle;
+      padding: 1%;
+      margin: 0;
+      iframe {
+        width: 100%;
+        // margin: 0;
+        height: 100%;
+        border-radius: $border-radius-MapGoogle;
+      }
+      &:hover {
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .footer__form {
+      background-color: $footer-form-MauNen;
+      padding: $form-padding-top-down $form-padding-left-right;
+      border-radius: $border-radius-form;
+      width: 100%;
+      height: $form-footer-max-hight;
+      margin: 0;
+      .form__item {
+        margin-bottom: $form-margin-item-bottom;
+        label {
+          display: block;
+          font-size: $text-medium;
+          margin-bottom: $form-margin-bottom;
+        }
+        input {
+          display: block;
+          width: 100%;
+          height: $form-footer-input-height;
+          border-radius: $border-radius-form-input;
+          font-size: $text-medium;
+          padding: $form-padding-input-top-down $form-padding-input-left-right;
+          border: 0;
+          &:hover {
+            outline: 0;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+          }
+        }
+        select {
+          display: block;
+          width: 100%;
+          height: $form-footer-input-height;
+          border-radius: $border-radius-form-input;
+          font-size: $text-medium;
+          padding: $form-padding-input-top-down $form-padding-input-left-right;
+          border: 0;
+          &:hover {
+            outline: 0;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+          }
+        }
+        textarea {
+          display: inline-block;
+          width: 100%;
+          resize: vertical;
+          min-height: calc($text-medium * 5);
+          font-size: $text-medium;
+          padding: $form-padding-input-top-down $form-padding-input-left-right;
+          border-radius: $border-radius-form;
+          &:hover {
+            outline: 0;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+      .form__item__checkbox {
+        margin-bottom: $form-margin-item-bottom;
+        p {
+          display: block;
+          font-size: $text-medium;
+          margin-bottom: $form-margin-bottom;
+        }
+        .form__item__checkbox__dichvu {
+          display: flex;
+          align-items: center;
+          gap: $form-item-checkbox-dichvu-gap;
+          .form__item__checkbox__dichvu__item {
+            width: 100%;
+            .form__item__checkbox_dichvu__item__content {
+              input {
+                display: inline;
+                border-radius: $border-radius-form-input;
+                &:hover {
+                  color: $black;
+                }
+              }
+              label {
+                display: inline;
+                font-size: calc($text-medium * 0.9);
+                font-style: italic;
+                color: $white;
+              }
+              &:hover {
+                label {
+                  color: $black;
+                }
+              }
+            }
+          }
+        }
+      }
+      button {
+        border-radius: $border-radius-form;
+        width: 100%;
+        padding: $button-padding-top-down $button-padding-left-right;
+        background-color: $footer-form-button-MauNen;
+        border: $header-border-bottom solid $footer-form-button-MauNen;
+        color: $white;
+        &:hover {
+          box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+      }
+      &:hover {
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+@import "./_responsive.scss";

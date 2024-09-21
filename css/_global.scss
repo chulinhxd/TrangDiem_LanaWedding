@@ -1,0 +1,38 @@
+@import "./_dieukhien.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: $text-medium;
+  font-family: "Oswald", sans-serif;
+}
+a {
+  color: black;
+  text-decoration: none; //mất gạch dưới chữ
+}
+ul {
+  list-style: none;
+}
+.section {
+  padding-top: $section-padding-top;
+  padding-bottom: $section-padding-bottom;
+}
+.container {
+  max-width: 70vw;
+  margin: auto;
+}
+// Section_header
+.section__header {
+  text-align: center;
+  margin-bottom: $section-header-margin-bottom;
+  h6 {
+    font-size: $text-medium;
+  }
+  h2 {
+    font-size: $text-large;
+    line-height: $banner-content-line-height;
+  }
+}
