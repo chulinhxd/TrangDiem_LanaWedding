@@ -455,6 +455,10 @@ ul {
 }
 
 @media (max-width: 1023px) {
+  .container {
+    max-width: 80vw;
+    margin: auto;
+  }
   :root {
     --text-small: 10px;
     --text-medium: 16px;
@@ -517,6 +521,10 @@ ul {
   }
 }
 @media (max-width: 767px) {
+  .container {
+    max-width: 90vw;
+    margin: auto;
+  }
   :root {
     --text-small: 10px;
     --text-medium: 12px;
