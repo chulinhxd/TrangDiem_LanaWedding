@@ -359,7 +359,7 @@
               }
               label {
                 display: inline;
-                font-size: calc(var(--text-medium) * 0.9);
+                font-size: var(--text-medium);
                 font-style: italic;
                 color: $white;
               }

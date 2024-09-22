@@ -432,7 +432,7 @@ ul {
 }
 .footer .footer__content .footer__form .form__item__checkbox .form__item__checkbox__dichvu .form__item__checkbox__dichvu__item .form__item__checkbox_dichvu__item__content label {
   display: inline;
-  font-size: calc(var(--text-medium) * 0.9);
+  font-size: var(--text-medium);
   font-style: italic;
   color: #ffffff;
 }
@@ -519,7 +519,7 @@ ul {
 @media (max-width: 767px) {
   :root {
     --text-small: 7px;
-    --text-medium: 12px;
+    --text-medium: 10px;
     --text-large: 20px;
   }
   .vaycuoi .vaycuoi__content {
