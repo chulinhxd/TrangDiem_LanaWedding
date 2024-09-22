@@ -1,5 +1,10 @@
-/* Khi màn hình có chiều rộng dưới 768px */
-@media (max-width: 1000px) {
+// Cho máy tính
+@media (max-width: 1023px) {
+  :root {
+    --text-small: 10px;
+    --text-medium: 16px;
+    --text-large: 32px;
+  }
   .makeup .makeup__content {
     width: 100%;
     display: grid;
@@ -54,12 +59,18 @@
   }
   .header .container .header__navbar {
     display: flex;
-      justify-content: center;
+    justify-content: center;
     //   gap: $header-menu-gap;
-    gap: calc($header-menu-gap*0.5);
+    gap: calc($header-menu-gap * 0.5);
   }
 }
-@media (max-width: 500px) {
+// Cho máy tính bảng
+@media (max-width: 767px) {
+  :root {
+    --text-small: 7px;
+    --text-medium: 14px;
+    --text-large: 20px;
+  }
   .vaycuoi .vaycuoi__content {
     display: grid;
     grid-template-columns: auto;
@@ -71,52 +82,16 @@
     grid-template-columns: auto;
     margin: auto;
   }
-  .footer
-    .footer__content
-    .footer__form
-    .form__item__checkbox
-    .form__item__checkbox__dichvu
-    .form__item__checkbox__dichvu__item
-    .form__item__checkbox_dichvu__item__content
-    label {
-    font-size: calc($text-medium * 0.7);
-
-  }
-  .footer
-    .footer__content
-    .footer__map {
-      padding: 2%;
-      height: $form-footer-min-hight;
-    }
-    
-  .footer .footer__content .footer__form .form__item input {
-    font-size: calc($text-medium * 0.8);
-  }
-  .footer .footer__content .footer__form .form__item select {
-    font-size: calc($text-medium * 0.8);
+  .footer .footer__content .footer__map {
+    padding: 2%;
+    height: $form-footer-min-hight;
   }
 }
-@media (max-width: 400px) {
-  .footer
-    .footer__content
-    .footer__form
-    .form__item__checkbox
-    .form__item__checkbox__dichvu
-    .form__item__checkbox__dichvu__item
-    .form__item__checkbox_dichvu__item__content
-    label {
-    font-size: calc($text-medium * 0.5);
+// Độ phân giải phổ biến của di động
+@media (max-width: 479px) {
+  :root {
+    --text-small: 5px;
+    --text-medium: 7px;
+    --text-large: 14px;
   }
-  .footer .footer__content .footer__form .form__item input {
-    font-size: calc($text-medium * 0.7);
-  }
-  .footer .footer__content .footer__form .form__item select {
-    font-size: calc($text-medium * 0.7);
-  }
-  .footer
-    .footer__content
-    .footer__map {
-      padding: 2%;
-      height: $form-footer-min-hight;
-    }
 }

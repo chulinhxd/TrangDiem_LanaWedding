@@ -16,7 +16,7 @@
     /* header logo */
     .header__logo a {
       color: $black;
-      font-size: $text-large;
+      font-size: var(--text-large);
       align-items: center;
     }
     /* header navbar */
@@ -58,7 +58,7 @@
     width: 50%;
     animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     p {
-      font-size: $text-medium;
+      font-size: var(--text-medium);
       letter-spacing: $banner-content-letter-spacing-small;
       animation: flip-in-ver-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
         both;
@@ -67,7 +67,7 @@
       animation-delay: 1s;
     }
     h1 {
-      font-size: $text-large;
+      font-size: var(--text-large);
       line-height: $banner-content-line-height;
       letter-spacing: $banner-content-letter-spacing-large;
     }
@@ -80,7 +80,7 @@
     }
     i {
       display: block;
-      font-size: $text-large;
+      font-size: var(--text-large);
       margin-top: $banner-icon-margin-top;
       animation: icon-pop-up-top;
       animation-iteration-count: infinite;
@@ -293,7 +293,7 @@
         margin-bottom: $form-margin-item-bottom;
         label {
           display: block;
-          font-size: $text-medium;
+          font-size: var(--text-medium);
           margin-bottom: $form-margin-bottom;
         }
         input {
@@ -301,7 +301,7 @@
           width: 100%;
           height: $form-footer-input-height;
           border-radius: $border-radius-form-input;
-          font-size: $text-medium;
+          font-size: var(--text-medium);
           padding: $form-padding-input-top-down $form-padding-input-left-right;
           border: 0;
           &:hover {
@@ -314,7 +314,7 @@
           width: 100%;
           height: $form-footer-input-height;
           border-radius: $border-radius-form-input;
-          font-size: $text-medium;
+          font-size: var(--text-medium);
           padding: $form-padding-input-top-down $form-padding-input-left-right;
           border: 0;
           &:hover {
@@ -326,8 +326,8 @@
           display: inline-block;
           width: 100%;
           resize: vertical;
-          min-height: calc($text-medium * 5);
-          font-size: $text-medium;
+          min-height: calc(var(--text-medium) * 5);
+          font-size: var(--text-medium);
           padding: $form-padding-input-top-down $form-padding-input-left-right;
           border-radius: $border-radius-form;
           &:hover {
@@ -340,7 +340,7 @@
         margin-bottom: $form-margin-item-bottom;
         p {
           display: block;
-          font-size: $text-medium;
+          font-size: var(--text-medium);
           margin-bottom: $form-margin-bottom;
         }
         .form__item__checkbox__dichvu {
@@ -359,7 +359,7 @@
               }
               label {
                 display: inline;
-                font-size: calc($text-medium * 0.9);
+                font-size: calc(var(--text-medium) * 0.9);
                 font-style: italic;
                 color: $white;
               }
