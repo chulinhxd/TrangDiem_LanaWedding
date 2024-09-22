@@ -518,8 +518,8 @@ ul {
 }
 @media (max-width: 767px) {
   :root {
-    --text-small: 7px;
-    --text-medium: 10px;
+    --text-small: 10px;
+    --text-medium: 12px;
     --text-large: 20px;
   }
   .vaycuoi .vaycuoi__content {
@@ -540,8 +540,8 @@ ul {
 }
 @media (max-width: 479px) {
   :root {
-    --text-small: 7px;
-    --text-medium: 10px;
+    --text-small: 10px;
+    --text-medium: 12px;
     --text-large: 20px;
   }
 }/*# sourceMappingURL=index.css.map */
