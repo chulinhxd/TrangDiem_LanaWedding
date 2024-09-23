@@ -97,6 +97,10 @@
 }
 // Độ phân giải phổ biến của di động
 @media (max-width: 479px) {
+  .container {
+    max-width: 80vw;
+    margin: auto;
+  }
   :root {
     --text-small: 10px;
     --text-medium: 12px;
